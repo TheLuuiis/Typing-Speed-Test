@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+:root {
+    --textWhite: #fff;
+    --textBlack: #161513;
+    --bacgroundBlack: #161513;
+    --backgroundWhite: #FDFFFC;
+    --fontFamily: "Onest", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontFamily);
+}
+
+.containerApp {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
