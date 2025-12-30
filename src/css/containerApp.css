@@ -15,12 +15,16 @@
 }
 
 body {
+    background-color: var(--bacgroundBlack);
     font-family: var(--fontFamily);
 }
 
 .containerApp {
     width: 100%;
-    height: auto;
+    max-width: 75rem;
+    height: 100dvh;
     display: flex;
+    margin: 0 auto;     
+    flex: 1 0 auto;  
     flex-direction: column;
 }

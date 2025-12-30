@@ -1,0 +1,219 @@
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-options {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.container-options::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    height: 1px;              
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.statistics {
+    gap: 50px;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.statistics span {
+    color: hsl(240, 1%, 59%);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: start;
+    cursor: pointer;
+    transition: .3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.statistics span::before {
+    content: "";
+    position: absolute;
+    left: -20px;          
+    top: 50%;
+    width: 1px;
+    height: 18px;            
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    transform: translateY(-50%);
+}
+
+.statistics span:first-child::before {
+    display: none;
+}
+
+.statistics-aditional {
+    gap: 30px;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.container-difficulties {
+    gap: 15px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-difficulties span {
+    color: hsl(240, 1%, 59%);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: start;
+    transition: .3s ease;
+}
+
+.container-difficulties a {
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+    padding: 3px 10px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 6px;
+}
+
+.container-difficulties a:hover {
+    color: hsl(214, 100%, 55%);
+    border: 1px solid hsl(214, 100%, 55%);
+}
+
+.container-mode {
+    gap: 15px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mode span {
+    color: hsl(240, 1%, 59%);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: start;
+    transition: .3s ease;
+}
+
+.container-mode a {
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+    padding: 3px 10px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 6px;
+}
+
+.container-mode a:hover {
+    color: hsl(214, 100%, 55%);
+    border: 1px solid hsl(214, 100%, 55%);
+}
+
+.container-mode {
+    position: relative;
+    padding-left: 24px;
+}
+
+.container-mode::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 22px;
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-50%);
+}
+
+/* Container - Words */
+.container-Words {
+    width: 100%;
+    height: auto;
+    padding: 50px 0px;
+    margin: 0px 0px 50px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.container-Words::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99%;              
+    height: 1px;
+    border-radius: 26px;
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.container-Words p {
+    color: hsl(240, 1%, 59%);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: start;
+    letter-spacing: 1px;
+}
+
+.container-restart-test {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-restart-test button {
+    gap: 8px;
+    width: auto;
+    height: auto;
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 13px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: middle;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.container-restart-test button:hover {
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 100%);
+}
