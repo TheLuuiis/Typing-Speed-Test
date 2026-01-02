@@ -3,7 +3,7 @@
 :root {
     --textWhite: #fff;
     --textBlack: #161513;
-    --bacgroundBlack: #161513;
+    --bacgroundBlack: hsl(0, 0%, 15%);
     --backgroundWhite: #FDFFFC;
     --fontFamily: "Onest", sans-serif;
 }

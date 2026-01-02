@@ -36,7 +36,7 @@
 
 .statistics span {
     color: hsl(240, 1%, 59%);
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     text-align: start;
     cursor: pointer;
@@ -59,6 +59,33 @@
 
 .statistics span:first-child::before {
     display: none;
+}
+
+.container-Words .char.incorrect {
+    color: #f97373;
+}
+
+.container-Words .caret {
+    display: inline-block;
+    width: 2px;
+    height: 1.3em;
+    background-color: hsl(140, 63%, 57%);
+    margin-right: 2px;
+    vertical-align: bottom;
+    animation: blink-caret 1s steps(1) infinite;
+}
+
+.container-Words .caret.caret-end {
+    margin-left: 2px;
+}
+
+@keyframes blink-caret {
+    0%, 50% {
+        opacity: 1;
+    }
+    50.01%, 100% {
+        opacity: 0;
+    }
 }
 
 .statistics-aditional {
@@ -183,6 +210,25 @@
     font-weight: 600;
     text-align: start;
     letter-spacing: 1px;
+    user-select: none;
+}
+
+.container-Words .char {
+    white-space: pre-wrap; 
+}
+
+.container-Words .char.correct {
+    color: #4ade80;
+}
+
+.container-Words .char.incorrect {
+    color: #f97373;
+}
+
+.hidden-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .container-restart-test {

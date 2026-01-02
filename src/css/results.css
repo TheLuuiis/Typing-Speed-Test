@@ -1,0 +1,149 @@
+.container-results {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0px;
+    position: relative;
+}
+
+.success-icon {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background-color: hsl(140, 63%, 57%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0px 0px 30px;
+}
+
+.success-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.success-icon::before {
+    content: "";
+    position: absolute;
+    inset: -25px;
+    border-radius: 50%;
+    background: hsl(140, 63%, 57%);
+    opacity: 0.35;
+    filter: blur(25px);
+}
+
+.success-icon::after {
+    content: "";
+    position: absolute;
+    inset: -45px;
+    border-radius: 50%;
+    background: hsl(140, 63%, 57%);
+    opacity: 0.15;
+    filter: blur(45px);
+}
+
+.success-icon img {
+    width: 85px;
+    height: 85px;
+    z-index: 1;
+}
+
+.container-results h2 {
+    color: hsl(0, 0%, 100%);
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0px 0px 13px;
+}
+
+.container-results p {
+    color: hsl(240, 1%, 59%);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px 0px 30px;
+}
+
+.container-cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 70px;
+}
+
+.card {
+    width: 140px;
+    height: 100px;
+    text-align: start;
+    display: flex;
+    padding: 17px;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid hsl(240, 1%, 59%);
+}
+
+.card a {
+    color: hsl(240, 1%, 59%);
+    font-size: 17px;
+    font-weight: 500;
+    text-align: start;
+    margin: 0px 0px 5px;
+    text-decoration: none;
+}
+
+.card span {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: start;
+}
+
+.wpm-white {
+    color: hsl(0, 0%, 100%);
+}
+
+.accuracy-red {
+    color: hsl(354, 63%, 57%);
+}
+
+.charaters-green {
+    color: hsl(140, 63%, 57%);
+}
+
+.container-results button {
+    gap: 8px;
+    width: auto;
+    height: auto;
+    color: hsl(0, 0%, 7%);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 13px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: middle;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+}
+
+.icon-left {
+    right: 48%;
+    bottom: 68%;
+    position: relative;
+}
+
+.icon-right {
+    left: 40%;
+    bottom: 25%;
+    position: relative;
+}
