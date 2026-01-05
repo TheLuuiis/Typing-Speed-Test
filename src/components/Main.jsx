@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import "../css/main.css";
 
-const INITIAL_TEXT = `software is an essential part of modern technology, it allows computers and devices to perform specific tasks, from simple calculations to complex systems that manage data and communication, developers write code to create software that is efficient, reliable, and easy to use, as technology evolves, software continues to improve the way people work, learn, and connect with the world through innovative digital solutions globally`;
+const INITIAL_TEXT = `music can be a simple way to relax the mind and body it brings rhythm and sound to daily life from calm tunes to loud beats that fill rooms artists create songs to share feelings and stories that feel honest warm and easy to enjoy as styles change music keeps shaping how people rest move and connect with others around the world today everywhere`;
 
-// Función helper para calcular estadísticas
 function calculateStats(userInput, elapsedSeconds, text) {
   const totalChars = text.length;
   const totalTyped = userInput.length;
@@ -32,11 +31,9 @@ function Main({ onTestEnd }) {
   const [timeLeft, setTimeLeft] = useState(60);
   const inputRef = useRef(null);
 
-  // Refs para evitar dobles finales y leer siempre el último input
   const userInputRef = useRef("");
   const hasFinishedRef = useRef(false);
 
-  // Timer de 60s
   useEffect(() => {
     if (!isRunning || timeLeft <= 0) return;
 
@@ -69,7 +66,6 @@ function Main({ onTestEnd }) {
     return () => clearInterval(intervalId);
   }, [isRunning, timeLeft, onTestEnd, text]);
 
-  // Manejo de entrada del usuario
   const handleChange = (event) => {
     const { value } = event.target;
 
@@ -77,19 +73,16 @@ function Main({ onTestEnd }) {
       setIsRunning(true);
     }
 
-    // Si ya terminó o no queda tiempo, no seguimos escribiendo
     if (timeLeft === 0 || hasFinishedRef.current) return;
 
-    // Limitamos al tamaño del texto objetivo
     const newValue = value.slice(0, text.length);
     setUserInput(newValue);
     userInputRef.current = newValue;
 
-    // ¿Terminó todo el texto?
     const finishedText = newValue.length === text.length;
     if (finishedText && !hasFinishedRef.current && onTestEnd) {
       hasFinishedRef.current = true;
-      setIsRunning(false); // detenemos el timer
+      setIsRunning(false); 
 
       const elapsedSeconds = 60 - timeLeft;
       const { wpm, accuracy, correctChars, totalChars } =
@@ -104,7 +97,6 @@ function Main({ onTestEnd }) {
     }
   };
 
-  // Reiniciar test desde Main (botón "Restart Test")
   const handleRestart = () => {
     setUserInput("");
     userInputRef.current = "";
@@ -116,7 +108,6 @@ function Main({ onTestEnd }) {
     }
   };
 
-  // Estadísticas en vivo
   const elapsedSecondsLive = 60 - timeLeft;
   const { wpm, accuracy } = calculateStats(
     userInput,

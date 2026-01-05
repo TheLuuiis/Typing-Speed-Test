@@ -40,3 +40,46 @@
     color: hsl(0, 0%, 100%);
     font-size: 17.5px;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0 30px;
+  }
+
+  .header .container-best p,
+  .header .container-best p span {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header > img {
+    max-width: 180px;
+  }
+
+  .header .container-best {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header .container-best p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 320px) {
+  .header > img {
+    max-width: 150px;
+  }
+
+  .header .container-best p,
+  .header .container-best p span {
+    font-size: 14px;
+  }
+}

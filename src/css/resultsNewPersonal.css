@@ -7,50 +7,17 @@
     flex-direction: column;
     padding: 100px 0px;
     position: relative;
+    background: url(/public/img/pattern-confetti.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.success-icon {
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    background-color: hsl(140, 63%, 57%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 0px 0px 30px;
-}
-
-.success-icon img {
+.container-results .logo-new {
     width: 100px;
     height: 100px;
     object-fit: contain;
-}
-
-.success-icon::before {
-    content: "";
-    position: absolute;
-    inset: -25px;
-    border-radius: 50%;
-    background: hsl(140, 63%, 57%);
-    opacity: 0.35;
-    filter: blur(25px);
-}
-
-.success-icon::after {
-    content: "";
-    position: absolute;
-    inset: -45px;
-    border-radius: 50%;
-    background: hsl(140, 63%, 57%);
-    opacity: 0.15;
-    filter: blur(45px);
-}
-
-.success-icon img {
-    width: 85px;
-    height: 85px;
-    z-index: 1;
+    margin: 0px 0px 20px;
 }
 
 .container-results h2 {
@@ -147,73 +114,4 @@
     left: 40%;
     bottom: 25%;
     position: relative;
-}
-
-@media (max-width: 768px) {
-  .container-results {
-    padding: 70px 0;
-  }
-
-  .container-results h2 {
-    font-size: 34px;
-  }
-
-  .container-results p {
-    font-size: 16px;
-  }
-
-  .container-cards {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .container-results {
-    padding: 50px 0;
-  }
-
-  .success-icon img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .container-results h2 {
-    font-size: 28px;
-  }
-
-  .container-cards {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .container-results button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .icon-left,
-  .icon-right {
-    display: none;
-  }
-}
-
-@media (max-width: 320px) {
-  .container-results h2 {
-    font-size: 24px;
-  }
-
-  .container-results p {
-    font-size: 14px;
-  }
-
-  .card a,
-  .card span {
-    font-size: 15px;
-  }
 }
